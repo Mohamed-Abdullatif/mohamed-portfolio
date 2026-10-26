@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import Navbar from "@/components/Navbar";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
@@ -50,7 +51,7 @@ export default function Home() {
               <a className="btn primary" href="#contact">
                 Let&apos;s talk
               </a>
-              <a className="btn" href="/Mohamed-Latif.pdf" download>
+              <a className="btn" href={asset("/Mohamed-Latif.pdf")} download>
                 Download CV
               </a>
             </div>
@@ -59,7 +60,7 @@ export default function Home() {
           <div className="hero-photo">
             <div className="ring" />
             <div className="frame">
-              <Image src="/img/portrait.jpg" alt="Portrait of Mohamed Latif" width={832} height={1248} priority sizes="(max-width: 860px) 70vw, 360px" />
+              <Image src={asset("/img/portrait.jpg")} alt="Portrait of Mohamed Latif" width={832} height={1248} priority sizes="(max-width: 860px) 70vw, 360px" />
             </div>
             <div className="chip c1 mono"><i />React Native</div>
             <div className="chip c2 mono"><i />TypeScript</div>
@@ -107,16 +108,16 @@ export default function Home() {
             </div>
             <div className="about-photos st">
               <figure>
-                <Image src="/img/desk.jpg" alt="Mohamed coding at his desk" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
+                <Image src={asset("/img/desk.jpg")} alt="Mohamed coding at his desk" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
               </figure>
               <figure>
-                <Image src="/img/jetski.jpg" alt="Mohamed riding a jet ski at sunset" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
+                <Image src={asset("/img/jetski.jpg")} alt="Mohamed riding a jet ski at sunset" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
               </figure>
               <figure>
-                <Image src="/img/boat.jpg" alt="Mohamed relaxing on a boat" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
+                <Image src={asset("/img/boat.jpg")} alt="Mohamed relaxing on a boat" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
               </figure>
               <figure>
-                <Image src="/img/driving.jpg" alt="Mohamed sitting in a car" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
+                <Image src={asset("/img/driving.jpg")} alt="Mohamed sitting in a car" width={832} height={1248} sizes="(max-width: 860px) 45vw, 220px" />
               </figure>
             </div>
           </div>
