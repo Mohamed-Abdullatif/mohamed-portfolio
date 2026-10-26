@@ -31,45 +31,55 @@ export default function Home() {
       <Effects />
       <Navbar />
       <main>
-        <section className="hero">
-          <div className="hero-text">
-            <p className="eyebrow mono">
-              <span className="dot" /> Available for new opportunities
-            </p>
-            <h1>
-              Hi, I&apos;m <span className="grad">{profile.name}</span>.
-              <br />I build mobile apps people love.
-            </h1>
-            <p className="typed mono">
-              &gt; <Typewriter words={roles} />
-            </p>
-            <p className="lead">
-              Mobile Application Developer with <strong>10+ years</strong> of experience shipping Android &amp; iOS apps — from
-              first idea to App Store and Google Play launch — using React Native, TypeScript and Node.js.
-            </p>
-            <div className="cta">
-              <a className="btn primary" href="#contact">
-                Let&apos;s talk
-              </a>
-              <a className="btn" href={asset("/Mohamed-Latif.pdf")} download>
-                Download CV
-              </a>
-            </div>
-            <p className="loc mono">📍 {profile.location}</p>
+        <div className="hero-wrap">
+          <div className="hero-shape" aria-hidden="true">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path d="M100 0 H32 C40 17 33 29 17 45 C2 60 10 73 34 75 C54 77 63 87 70 100 H100 Z" />
+            </svg>
           </div>
-          <div className="hero-photo">
-            <div className="ring" />
-            <div className="frame">
-              <Image src={asset("/img/portrait.jpg")} alt="Portrait of Mohamed Latif" width={832} height={1248} priority sizes="(max-width: 860px) 70vw, 360px" />
+          <section className="hero">
+            <div className="hero-text">
+              <div className="sparkles" aria-hidden="true">
+                <span className="spark s1"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span><span className="spark s2"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span><span className="spark s3"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span><span className="spark s4"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span><span className="spark s5"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span><span className="spark s6"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span>
+              </div>
+              <p className="eyebrow mono">
+                <span className="dot" /> Available for new opportunities
+              </p>
+              <h1>
+                Hello, my name is <span className="grad">{profile.name}</span>
+              </h1>
+              <p className="typed mono">
+                &gt; <Typewriter words={roles} />
+              </p>
+              <p className="lead">
+                Mobile Application Developer with <strong>10+ years</strong> of experience shipping Android &amp; iOS apps — from
+                first idea to App Store and Google Play launch — using React Native, TypeScript and Node.js.
+              </p>
+              <div className="cta">
+                <a className="btn primary" href="#experience">
+                  Experience
+                </a>
+                <a className="btn" href="#contact">
+                  Book a call
+                </a>
+                <a className="btn" href={asset("/Mohamed-Latif.pdf")} download>
+                  Download CV
+                </a>
+              </div>
+              <p className="loc mono">📍 {profile.location}</p>
             </div>
-            <div className="chip c1 mono"><i />React Native</div>
-            <div className="chip c2 mono"><i />TypeScript</div>
-            <div className="chip c3 mono"><i />iOS · Android</div>
+            <div className="hero-photo">
+              <div className="frame">
+                <Image src={asset("/img/portrait.jpg")} alt="Portrait of Mohamed Latif" width={832} height={1248} priority sizes="(max-width: 860px) 78vw, 470px" />
+              </div>
+              <span className="spark s7"><svg viewBox="0 0 24 24"><path d="M12 0C12.9 7.2 16.8 11.1 24 12 16.8 12.9 12.9 16.8 12 24 11.1 16.8 7.2 12.9 0 12 7.2 11.1 11.1 7.2 12 0Z" /></svg></span>
+            </div>
+          </section>
+          <div className="featured">
+            <p>Technologies I work with</p>
+            <Marquee items={marqueeItems} />
           </div>
-          <div className="scroll-hint" aria-hidden="true" />
-        </section>
-
-        <Marquee items={marqueeItems} />
+        </div>
 
         <section className="stats">
           {stats.map((s) => (
